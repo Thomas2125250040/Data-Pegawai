@@ -1,41 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".UpdatePostActivity">
 
     <RelativeLayout
-        android:layout_margin="16dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_margin="32dp"
+            android:id="@+id/iv_pegawai"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"/>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/til_content"
+            android:id="@+id/til_nama"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:counterEnabled="true"
-            app:counterMaxLength="160">
+            android:layout_below="@+id/iv_pegawai"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginBottom="16dp">
+
             <EditText
-                android:id="@+id/et_content"
+                android:id="@+id/et_nama"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Content Post"
+                android:hint="Nama Lengkap"
                 android:inputType="none"
-                android:maxLength="160"
-                />
+                android:maxLength="40" />
+        </com.google.android.material.textfield.TextInputLayout>
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_umur"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:layout_below="@+id/til_nama"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/et_umur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Umur"
+                android:inputType="number"
+                android:maxLength="160" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_jabatan"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:layout_below="@+id/til_umur"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/et_jabatan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Jabatan"
+                android:inputType="none"
+                android:maxLength="160" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_keterangan"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:layout_below="@+id/til_jabatan"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/et_keterangan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Keterangan"
+                android:inputType="none"
+                android:maxLength="160" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_link"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:layout_below="@+id/til_keterangan"
+            android:layout_marginBottom="32dp">
+
+            <EditText
+                android:id="@+id/et_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Link Gambar"
+                android:inputType="none"
+                />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:id="@+id/btn_update"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Update Post"
-            android:layout_below="@id/til_content"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginBottom="32dp"
+            android:layout_below="@id/til_link"
             android:layout_alignParentEnd="true"
-            />
+            android:text="Update Post" />
+
         <ProgressBar
             android:id="@+id/progress_bar"
             android:layout_width="wrap_content"
@@ -43,8 +124,6 @@
             android:layout_below="@id/btn_update"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="8dp"
-            android:visibility="gone"
-            />
+            android:visibility="gone" />
     </RelativeLayout>
-
-</RelativeLayout>
+</ScrollView>

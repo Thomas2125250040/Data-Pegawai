@@ -17,7 +17,7 @@
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:layout_gravity="center"
-            android:src="@drawable/baseline_event_note_24"
+            android:src="@drawable/baseline_person_24"
             android:layout_marginTop="30dp"
             android:layout_marginBottom="30dp"/>
 
@@ -74,9 +74,6 @@
 
 
             />
-
-
-
 
     </LinearLayout>
     <ProgressBar

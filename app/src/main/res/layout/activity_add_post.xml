@@ -4,49 +4,118 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddPostActivity"
-    >
-   <RelativeLayout
-       android:layout_margin="16dp"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content">
+    tools:context=".AddPostActivity">
 
-       <com.google.android.material.textfield.TextInputLayout
-           android:id="@+id/til_content"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           app:counterEnabled="true"
-           app:counterMaxLength="160">
-           <EditText
-               android:id="@+id/et_content"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:hint="Content Post"
-               android:inputType="none"
-               android:maxLength="160"
-               />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp">
 
-       </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_nama"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_pegawai"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp">
 
-       <Button
-           android:id="@+id/btn_add"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:text="Add Post"
-           android:layout_below="@id/til_content"
-           android:layout_alignParentEnd="true"
-           />
-       <ProgressBar
-           android:id="@+id/progress_bar"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_below="@id/btn_add"
-           android:layout_centerHorizontal="true"
-           android:layout_marginTop="8dp"
-           android:visibility="gone"
-           />
-   </RelativeLayout>
+            <EditText
+                android:id="@+id/et_nama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nama Lengkap"
+                android:inputType="none"
+                android:maxLength="40" />
+        </com.google.android.material.textfield.TextInputLayout>
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_umur"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/til_nama"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/et_umur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Umur"
+                android:inputType="number"
+                android:maxLength="160" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_jabatan"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/til_umur"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/et_jabatan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Jabatan"
+                android:inputType="none"
+                android:maxLength="160" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_keterangan"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/til_jabatan"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/et_keterangan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Keterangan"
+                android:inputType="none"
+                android:maxLength="160" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_link"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/til_keterangan"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/et_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Link Gambar"
+                android:inputType="none"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/til_link"
+            android:layout_alignParentEnd="true"
+            android:text="Add Post" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_add"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:visibility="gone" />
+    </RelativeLayout>
 
 
 </RelativeLayout>
